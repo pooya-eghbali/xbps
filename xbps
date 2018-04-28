@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+import subprocess
+import sys
+
+args = sys.argv[1:]
+
+if args[0] in ['in', 'install', 'add', '+']:
+    args[0] = 'xbps-install'
+elif args[0] in ['search', 'query', '?']:
+    args = ['xbps-query', '-s'] + args[1:]
+elif args[0] in ['rm', 'remove', '-']:
+    args[0] = 'xbps-remove'
+elif args[0] in ['rm+', 'remove+', '-+']:
+    args = ['xbps-remove', '-R'] + args[1:]
+elif args[0] in ['up', 'update', '^']:
+    args = ['xbps-install', '-Su'] + args[1:]
+elif args[0] in ['ls', 'list', '=']:
+    args = ['xbps-query', '-l']
+elif args[0] in ['reps', 'repositories']:
+    args = ['xbps-query', '-L']
+elif args[0] in ['info', 'inf', '!']:
+    args[0] = 'xbps-query'
+elif args[0] in ['reconf', 'reconfigure', '~']:
+    args[0] = 'xbps-reconfigure'
+elif args[0] in ['alt', 'alternatives', '/']:
+    args = ['xbps-alternatives', '-l'] + args[1:]
+elif args[0] in ['src', 'source', '*']:
+    args[0] = './xbps-src'
+elif args[0] in ['pkgdb', 'pkg', 'db', '#']:
+    args[0] = 'xbps-pkgdb'
+elif args[0] in ['index', 'rindex', '@']:
+    args[0] = 'xbps-rindex'
+else:
+    args = ['xbps-install'] + args
+
+if not args[0] == './xbps-src':
+    args = ['sudo'] + args
+
+subprocess.call(args)
