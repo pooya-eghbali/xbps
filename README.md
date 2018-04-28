@@ -6,6 +6,7 @@ A wrapper around void linux xbps tools.
 To install this, either do
 
 ```
+xbps-install python3
 git clone https://github.com/pooya-eghbali/xbps
 cd xbps
 chmod +x xbps
