@@ -52,6 +52,11 @@ xbps -+ pkg       # same as above
 for `xbps-query` you have:
 
 ```
+xbps query pkg    # same as xbps query pkg
+xbps info pkg     # same as above
+xbps inf pkg      # same as above
+xbps ! pkg        # same as above
+
 xbps search pkg   # same as xbps-query -s pkg
 xbps find pkg     # same as above
 xbps ? pkg        # same as above
@@ -62,11 +67,6 @@ xbps =            # same as xbps-query -l
 
 xbps repositories # same as xbps-query -L
 xbps reps         # same as above
-
-xbps query pkg    # same as xbps query pkg
-xbps info pkg     # same as above
-xbps inf pkg      # same as above
-xbps ! pkg        # same as above
 ```
 
 for `xbps-reconfigure` you have:
