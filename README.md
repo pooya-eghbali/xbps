@@ -17,7 +17,7 @@ or any other way you prefer (idk, installing in sbin or /usr/bin, or downloading
 
 # Features
 
-1. Automatic sudo. 
+1. Automatic sudo.
 2. Shortcuts
 3. Python3 only.
 
@@ -59,7 +59,7 @@ xbps ! pkg        # same as above
 
 xbps search pkg   # same as xbps-query -s pkg
 xbps find pkg     # same as above
-xbps ? pkg        # same as above
+xbps @ pkg        # same as above
 
 xbps list         # same as xbps-query -l
 xbps ls           # same as xbps-query -l
@@ -74,7 +74,6 @@ for `xbps-reconfigure` you have:
 ```
 xbps reconfigure pkg  # same as xbps-reconfigure pkg
 xbps reconf pkg       # same as above
-xbps ~ pkg            # same as above
 ```
 
 for `xbps-alternatives` you have:
@@ -90,7 +89,6 @@ for `./xbps-src` you have:
 ```
 xbps source pkg   # same as ./xbps-src pkg
 xbps src pkg      # same as above
-xbps * pkg        # same as above
 ```
 
 for `xbps-pkgdb` you have:
@@ -99,7 +97,6 @@ for `xbps-pkgdb` you have:
 xbps pkgdb pkg    # same as xbps-pkgdb pkg
 xbps pkg pkg      # same as above
 xbps db pkg       # same as above
-xbps @ pkg        # same as above
 ```
 
 for `xbps-rindex` you have:
@@ -107,10 +104,9 @@ for `xbps-rindex` you have:
 ```
 xbps rindex       # same as xbps-rindex
 xbps index        # same as above
-xbps $            # same as above
 ```
 
-if some of the one-char shortcuts don't make any sense, you can suggest replacement. for me some of them make sense, some of them don't, but i couldn't find any better ones.
+if some of the one-char shortcuts don't make any sense, you can suggest replacement. for me some of them make sense, some of them don't, but i couldn't find any better ones. Some of the commands don't have one-char, suggestions are welcomed.
 
 # questions
 
